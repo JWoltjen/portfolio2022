@@ -4,11 +4,19 @@ import Intro from './components/intro/Intro';
 import Portfolio from './components/portfolio/Portfolio';
 import Topbar from './components/topbar/Topbar';
 import Works from './components/works/Works';
+import "./app.scss"
 
 function App() {
   return (
     <div className="app">
-      <h1>Hello World</h1>
+      <Topbar/>
+      <div className="sections">
+          <Intro/>
+          <Portfolio/>
+          <Works/>
+          <Testimonials/>
+          <Contact/>
+      </div>
     </div>
   );
 }

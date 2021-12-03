@@ -2,7 +2,7 @@ import "./Intro.scss"
 
 function Intro() {
     return (
-        <div>
+        <div className='intro'>
             Intro
         </div>
     )
