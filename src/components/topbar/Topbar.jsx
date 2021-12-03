@@ -17,6 +17,11 @@ function Topbar() {
                     </div>
                 </div>
                 <div className="right">
+                    <div className="hamburger">
+                        <span className="line1">1</span>
+                        <span className="line2">2</span>
+                        <span className="line3">3</span>
+                    </div>
                 </div>
             </div>
         </div>
