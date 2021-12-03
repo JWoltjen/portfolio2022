@@ -9,11 +9,12 @@ import "./app.scss"
 import react, {useState} from 'react'
 
 function App() {
-  const [menuOpen, setMenuOpen] = useState(true)
+  const [menuOpen, setMenuOpen] = useState(false)
+  const [sideBarOpen, setSideBarOpen] = useState(false)
   return (
     <div className="app">
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <Menu />
+      <Menu sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen}/>
       <div className="sections">
           <Intro/>
           <Portfolio/>
