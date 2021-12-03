@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: all 2.2s ease; 
 
     &.active{
         right: 0; 

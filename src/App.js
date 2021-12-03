@@ -10,11 +10,10 @@ import react, {useState} from 'react'
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [sideBarOpen, setSideBarOpen] = useState(false)
   return (
     <div className="app">
       <Topbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
-      <Menu sideBarOpen={sideBarOpen} setSideBarOpen={setSideBarOpen}/>
+      <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
       <div className="sections">
           <Intro/>
           <Portfolio/>

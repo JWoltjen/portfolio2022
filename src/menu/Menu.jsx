@@ -1,9 +1,9 @@
 import "./Menu.scss"
 
 
-function Menu({sideBarOpen, setSideBarOpen}) {
+function Menu({menuOpen, setMenuOpen}) {
     return (
-        <div className={'menu' + (sideBarOpen && "active")}>
+        <div className={'menu ' + (menuOpen && " active")}>
             <ul>
                 <li>
                     <a href="#intro">Home</a>
