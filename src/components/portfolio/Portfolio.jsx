@@ -1,15 +1,36 @@
 import "./Portfolio.scss"
+import PortfolioList from "../portfolioList/PortfolioList";
 
 function Portfolio() {
+    const list = [
+        {
+            id: "featured", 
+            title: "Featured", 
+        }, 
+        {
+            id: "nightAtTheMovies", 
+            title: "Night at the Movies", 
+        }, 
+        {
+            id: "neumann", 
+            title: "Neumann", 
+        }, 
+        {
+            id: "quizApp", 
+            title: "Quiz App", 
+        }, 
+        {
+            id: "catter", 
+            title: "Catter"
+        }
+    ]
     return (
         <div className="portfolio" id="portfolio">
             <h1>Portfolio</h1>
             <ul>
-                <li className="active">Featured</li>
-                <li>Night at the Movies</li>
-                <li>Neumann</li>
-                <li>Quiz App</li>
-                <li>Image Finder</li>
+              {list.map(item => (
+                  <PortfolioList/>
+              ))}  
             </ul>
             <div className="container">
                 <div className="item">
