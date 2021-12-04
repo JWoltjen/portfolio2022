@@ -53,6 +53,13 @@
 
             img{
                 width: 50px;
+                animation: arrowBlink 2s infinite; 
+            }
+
+            @keyframes arrowBlink {
+                100%{
+                    opacity: 0; 
+                }                
             }
         }
     }
