@@ -13,8 +13,20 @@ function Portfolio() {
             </ul>
             <div className="container">
                 <div className="item">
-                    <img src="./assets/portfolio.png" alt=""/>
-                    <h2>What</h2>
+                    <img src="./assets/application.png" alt=""/>
+                    <h3>Night at the Movies</h3>
+                </div>
+                <div className="item">
+                    <img src="./assets/application.png" alt=""/>
+                    <h3>Neumann</h3>
+                </div>
+                <div className="item">
+                    <img src="./assets/application.png" alt=""/>
+                    <h3>Quiz App</h3>
+                </div>
+                <div className="item">
+                    <img src="./assets/application.png" alt=""/>
+                    <h3>Image Finder</h3>
                 </div>
             </div>
         </div>
