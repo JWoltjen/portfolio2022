@@ -1,14 +1,15 @@
 import "./Portfolio.scss"
 import {useEffect, useState} from 'react'
 import PortfolioList from "../portfolioList/PortfolioList";
+import {nightAtTheMovies,
+        quizApp, 
+    catter,
+    neumann} from '../../data'; 
 
 function Portfolio() {
-    const [selected, setSelected] = useState("featured")
+    const [selected, setSelected] = useState("neumann")
+    const [data, setData] = useState([])
     const list = [
-        {
-            id: "featured", 
-            title: "Featured", 
-        }, 
         {
             id: "nightAtTheMovies", 
             title: "Night at the Movies", 
@@ -27,6 +28,26 @@ function Portfolio() {
         }, 
        
     ]
+
+    useEffect(() => {
+        switch(selected){
+                case "nightAtTheMovies":
+                setData(nightAtTheMovies); 
+                break;
+                case "neumann":
+                setData(neumann); 
+                break;
+                case "quizApp":
+                setData(quizApp); 
+                break;
+                case "catter":
+                setData(catter); 
+                break;
+                default:
+                    setData(nightAtTheMovies)
+        }
+
+    }, [selected])
     return (
         <div className="portfolio" id="portfolio">
             <h1>Portfolio</h1>
@@ -42,22 +63,11 @@ function Portfolio() {
               ))}  
             </ul>
             <div className="container">
-                <div className="item">
-                    <img src="./assets/application.png" alt=""/>
-                    <h3>Night at the Movies</h3>
-                </div>
-                <div className="item">
-                    <img src="./assets/application.png" alt=""/>
-                    <h3>Neumann</h3>
-                </div>
-                <div className="item">
-                    <img src="./assets/application.png" alt=""/>
-                    <h3>Quiz App</h3>
-                </div>
-                <div className="item">
-                    <img src="./assets/application.png" alt=""/>
-                    <h3>Image Finder</h3>
-                </div>
+                {data.map(project => (
+                    <div className="item">
+                        <h1>{project.title}</h1>
+                    </div>
+                ))}
             </div>
         </div>
     )
