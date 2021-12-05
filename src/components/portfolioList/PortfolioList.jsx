@@ -1,11 +1,14 @@
 import "./PortfolioList.scss"
 
 
-function PortfolioList() {
+function PortfolioList({title, id, active, setSelected }) {
     return (
-        <div>
-            
-        </div>
+        <li 
+            className={active ? "portfolioList active" : "portfolioList"}
+            onClick={() => setSelected(id)}
+        >
+            {title}
+        </li>
     )
 }
 
