@@ -7,10 +7,18 @@ function Works() {
                 <div className="container">
                     <div className="item">
                         <div className="left">
-
+                            <div className="leftContainer">
+                                <div className="imgContainer">
+                                    <img src="assets/mobile.png" alt="a picture of a mobile icon"/>
+                                </div>
+                                <h2>Title</h2>
+                                <p>Dolor cillum Lorem laboris adipisicing non minim adipisicing est. Incididunt occaecat tempor elit deserunt elit dolor laborum dolore labore est sint. </p>
+                                <span>Projects</span>
+                            </div>
                         </div>
+
                         <div className="right">
-                            
+
                         </div>
                     </div>
                 </div>
