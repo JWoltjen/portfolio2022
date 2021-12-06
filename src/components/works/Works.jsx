@@ -23,6 +23,8 @@ function Works() {
                     </div>
                 </div>
             </div>
+            <img src="assets/arrow.png" className="arrow left" alt="left arrow icon"/>
+            <img src="assets/arrow.png" className="arrow right" alt="right arrow icon"/>
         </div>
     )
 }

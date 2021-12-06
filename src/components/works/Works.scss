@@ -3,6 +3,23 @@
     display: flex; 
     align-items: center;
     justify-content: center;
+    position: relative; 
+
+    .arrow{
+        height: 70px; 
+        position: absolute; 
+        cursor: pointer; 
+
+
+        &.left{
+            left: 100px; 
+            transform: rotateY(180deg)
+        }
+
+        &.right {
+            right: 100px; 
+        }
+    }
 
     .slider{
         height: 350px;
