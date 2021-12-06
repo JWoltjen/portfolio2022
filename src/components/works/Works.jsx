@@ -1,7 +1,9 @@
 import "./Works.scss"
+import {useState} from 'react' 
+
 
 function Works() {
-
+   const [currentSlide, setCurrentSlide] = useState(0); 
    const data = [
     {
         id: "nightAtTheMovies", 
@@ -27,15 +29,22 @@ function Works() {
     {
         id: "catter", 
         title: "Catter",
-        img: "tbd", 
+        img: "assets/cat.png", 
         desc: "tbd", 
         tech: ["tbd", "tbd", 'tbd']
     }
    ]
 
+   const handleClick = (direction) => {
+     direction === 'left' 
+        ? setCurrentSlide(currentSlide > 0 ? currentSlide-1 : data.length-1) 
+        : setCurrentSlide(currentSlide < data.length -1 ? currentSlide + 1 : 0)
+   }
+
+
     return (
         <div className="works" id="works">
-            <div className="slider">
+            <div className="slider" style={{transform: `translateX(-${currentSlide * 100}vw)`}}>
                 {data.map(item => (
                     <div className="container">
                     <div className="item">
@@ -45,7 +54,7 @@ function Works() {
                                     <img src="assets/mobile.png" alt="a picture of a mobile icon"/>
                                 </div>
                                 <h2>{item.title}</h2>
-                                <p>Dolor cillum Lorem laboris adipisicing non minim adipisicing est. Incididunt occaecat tempor elit deserunt elit dolor laborum dolore labore est sint. </p>
+                                <p>{item.desc} </p>
                                 <span>Projects</span>
                             </div>
                         </div>
@@ -57,8 +66,8 @@ function Works() {
                     </div>
                 ))}
             </div>
-            <img src="assets/arrow.png" className="arrow left" alt="left arrow icon"/>
-            <img src="assets/arrow.png" className="arrow right" alt="right arrow icon"/>
+            <img src="assets/arrow.png" className="arrow left" alt="left arrow icon" onClick={()=>handleClick('left')}/>
+            <img src="assets/arrow.png" className="arrow right" alt="right arrow icon" onClick={()=>handleClick()}/>
         </div>
     )
 }
