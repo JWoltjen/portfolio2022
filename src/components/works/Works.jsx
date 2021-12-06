@@ -18,7 +18,7 @@ function Works() {
                         </div>
 
                         <div className="right">
-
+                            <img src="assets/neumann.jpg" alt="a marble bust of Marcus Aurelius"/>
                         </div>
                     </div>
                 </div>
