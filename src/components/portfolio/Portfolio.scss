@@ -75,6 +75,13 @@
                 z-index: 1;
             }
 
+            span {
+                background-color: lightgray;
+                margin: 5px; 
+                padding: 5px; 
+                border-radius: 5px;
+            }
+
             &:hover{
                 background-color: $mainColor; 
                 img {
