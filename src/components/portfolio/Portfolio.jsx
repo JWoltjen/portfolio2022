@@ -60,7 +60,7 @@ function Portfolio() {
                 {data.map(project => (
                     <div className="item">
                         <h3>{project.title}</h3>
-                        <img src={project.src} />
+                        <img src={project.img} />
                         <p>{project.desc}
                         <ul>{project.tech.map(tag => (<li>{tag}</li>))}</ul>
                         </p>
