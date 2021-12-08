@@ -11,6 +11,7 @@
 
         @include mobile {
             font-size: 20px; 
+            overflow: hidden;
         }
     }
 
@@ -19,11 +20,20 @@
         padding: 0; 
         list-style: none;
         display: flex;
+       
 
         @include mobile {
             flex-wrap: wrap; 
             justify-content: center;
-            margin: 10px 0; 
+            margin: 5px 0;
+            overflow: hidden; 
+        }
+
+        li {
+            height: 10px; 
+            margin: 5px; 
+            padding: 10px; 
+            overflow: hidden;
         }
     }
     .container {
@@ -32,9 +42,15 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap; 
+        
 
         @include mobile {
             width: 100%;  
+            -ms-overflow-style: none; 
+            scrollbar-width: none; 
+            ::-webkit-scrollbar{
+            display: none; 
+            }
         }
 
         .item {
@@ -57,7 +73,39 @@
 
             p {
                 height: 40%; 
-                margin: 1rem 1rem; 
+                margin: 1rem 1rem;
+                display: flex; 
+                flex-direction: column; 
+                justify-self: flex-end;
+                overflow: auto; 
+
+                ul {
+                    height: 10%; 
+                    width: 100%; 
+                    display: flex; 
+                    justify-content: space-evenly;
+                    align-items: center;
+                    position: absolute; 
+                    bottom: 0px; 
+                    left: 5px; 
+
+                    li {
+                        background-color: lightgray;
+                        margin: 10px 5px; 
+                        padding: 2px; 
+                        border-radius: 5px;
+                        height: 25px; 
+                        font-size: 10px; 
+                        font-weight: 700; 
+                        display: flex;
+                        align-items: center;
+        
+                        @include mobile {
+                            margin: 2px 1px; 
+                            padding: 1px; 
+                        }
+                    }
+                }
             }
 
             h3{
@@ -75,17 +123,7 @@
                 z-index: 1;
             }
 
-            li {
-                background-color: lightgray;
-                margin: 10px 5px; 
-                padding: 2px; 
-                border-radius: 5px;
-
-                @include mobile {
-                    margin: 2px 1px; 
-                    padding: 1px; 
-                }
-            }
+            
 
             &:hover{
                 background-color: $mainColor; 
