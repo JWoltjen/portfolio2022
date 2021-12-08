@@ -56,12 +56,12 @@
             }
 
             p {
-                height: 30%; 
+                height: 40%; 
                 margin: 1rem 1rem; 
             }
 
             h3{
-                height: 25%; 
+                height: 15%; 
                 display: flex; 
                 justify-content: center;
                 align-items: center;
@@ -80,6 +80,11 @@
                 margin: 10px 5px; 
                 padding: 2px; 
                 border-radius: 5px;
+
+                @include mobile {
+                    margin: 2px 1px; 
+                    padding: 1px; 
+                }
             }
 
             &:hover{
