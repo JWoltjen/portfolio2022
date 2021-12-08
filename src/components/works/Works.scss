@@ -13,7 +13,7 @@
         cursor: pointer; 
 
         @include mobile{
-            display: none; 
+            display: none;  
         }
 
         &.left{
@@ -54,9 +54,10 @@
                 justify-content: center;
 
                 @include mobile {
-                    width: 90%;
+                    width: 80%;
                     height: 180px; 
                     margin: 5px 0; 
+
                 }
 
                 .left{
