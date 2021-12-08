@@ -1,10 +1,7 @@
 import "./Portfolio.scss"
 import {useEffect, useState} from 'react'
 import PortfolioList from "../portfolioList/PortfolioList";
-import {nightAtTheMovies,
-        quizApp, 
-    catter,
-    neumann} from '../../data'; 
+import {nightAtTheMovies, catter, neumann} from '../../data'; 
 
 function Portfolio() {
     const [selected, setSelected] = useState("neumann")
@@ -37,17 +34,14 @@ function Portfolio() {
                 case "neumann":
                 setData(neumann); 
                 break;
-                case "quizApp":
-                setData(quizApp); 
-                break;
                 case "catter":
                 setData(catter); 
                 break;
                 default:
-                    setData(nightAtTheMovies)
+                setData(nightAtTheMovies)
         }
-
     }, [selected])
+
     return (
         <div className="portfolio" id="portfolio">
             <h1>Portfolio</h1>
@@ -65,7 +59,11 @@ function Portfolio() {
             <div className="container">
                 {data.map(project => (
                     <div className="item">
-                        <h1>{project.title}</h1>
+                        <h3>{project.title}</h3>
+                        <img src={project.img} />
+                        <p>{project.desc}
+                        <ul>{project.tech.map(tag => (<li>{tag}</li>))}</ul>
+                        </p>
                     </div>
                 ))}
             </div>

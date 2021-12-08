@@ -9,29 +9,22 @@ function Works() {
         id: "nightAtTheMovies", 
         title: "Night at the Movies", 
         img: "assets/movies.jpg", 
-        desc: "tbd", 
-        tech: ["tbd", "tbd", 'tbd']
+        desc: "A single page application that allows users to search for movies and shows.", 
+        tech: ["Redux Toolkit", "React Router", 'Styled Components']
     },
     {
         id: "neumann", 
         title: "Neumann", 
         img: "assets/neumann.jpg", 
-        desc: "tbd", 
-        tech: ["tbd", "tbd", 'tbd']
-    },
-    {
-        id: "quizApp", 
-        title: "Quiz App", 
-        img: "tbd", 
-        desc: "tbd", 
+        desc: "A MERN application that plays philosophical aphorisms from a database.", 
         tech: ["tbd", "tbd", 'tbd']
     },
     {
         id: "catter", 
         title: "Catter",
         img: "assets/cat.png", 
-        desc: "tbd", 
-        tech: ["tbd", "tbd", 'tbd']
+        desc: "A SPA that lets users search for cats and vote on them.", 
+        tech: ["Redux Toolkit"]
     }
    ]
 
@@ -55,7 +48,6 @@ function Works() {
                                 </div>
                                 <h2>{item.title}</h2>
                                 <p>{item.desc} </p>
-                                <span>Projects</span>
                             </div>
                         </div>
 
