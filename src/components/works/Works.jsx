@@ -20,13 +20,6 @@ function Works() {
         tech: ["tbd", "tbd", 'tbd']
     },
     {
-        id: "quizApp", 
-        title: "Quiz App", 
-        img: "tbd", 
-        desc: "tbd", 
-        tech: ["tbd", "tbd", 'tbd']
-    },
-    {
         id: "catter", 
         title: "Catter",
         img: "assets/cat.png", 
@@ -55,7 +48,6 @@ function Works() {
                                 </div>
                                 <h2>{item.title}</h2>
                                 <p>{item.desc} </p>
-                                <span>Projects</span>
                             </div>
                         </div>
 
