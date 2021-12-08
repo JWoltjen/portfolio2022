@@ -7,7 +7,7 @@
     align-items: center;
 
     h1 {
-        font-size: 50px; 
+        font-size: 30px; 
 
         @include mobile {
             font-size: 20px; 
@@ -38,8 +38,8 @@
         }
 
         .item {
-            width: 60%;
-            height: 500px;
+            width: 30rem; 
+            height: 35rem; 
             border-radius: 20px;
             border: 1px solid lightgray; 
             margin: 25px 25px;  
@@ -61,7 +61,7 @@
             }
 
             h3{
-                height: 20%; 
+                height: 25%; 
                 display: flex; 
                 justify-content: center;
                 align-items: center;
@@ -70,7 +70,7 @@
 
             img {
                 width: 100%; 
-                height: 100%; 
+                height: 45%; 
                 object-fit: contain;
                 z-index: 1;
             }
